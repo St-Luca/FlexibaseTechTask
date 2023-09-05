@@ -108,30 +108,17 @@ public class Solution
         stringBuilder.Append(value);
     }
 
-    /// <summary>
-    ///  Метод для вывода как в сообщении
-    /// </summary>
-    private static void PrintList(List<Object> list)
-    {
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (i < list.Count - 1)
-            {
-                Console.Write(list[i] + ", ");
-            }
-            else Console.Write(list[i] + " ");
-        }
-    }
-
 
     static void Main(string[] args)
     {
         List<Object> example1 = ReplaceDigits(new List<object> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 60, 105, 420 });
-        PrintList(example1);
+        var result1 = String.Join(", ", example1.ToArray());
+        Console.WriteLine(result1);
 
         Console.WriteLine();
 
         List<Object> example2 = ReplaceDigits2(new List<object> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 60, 105, 420 });
-        PrintList(example2);
+        var result2 = String.Join(", ", example2.ToArray());
+        Console.WriteLine(result2);
     }
 }
